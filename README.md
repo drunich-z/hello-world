@@ -4,4 +4,4 @@ my first experiments
 Hi, everybody!
 
 London is the capital of Greate Britain!
-My name is Andrey and its seems to me that i should finish thi cource!
+My name is Andrey and its seems to me that i should to finish this course!
