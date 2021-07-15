@@ -1,9 +1,9 @@
 {
-  "name": "nodejs-demo",
+  "name": "efk-srv",
   "private": true,
   "scripts": {
-    "start": "node ./dist/app.js",
-    "watch": "nodemon ./dist/app.js",
+    "start": "node dist/app.js",
+    "watch": "nodemon dist/app.js",
     "lint": "eslint src --ext .ts,.js",
     "build": "tsc",
     "postinstall": "npm run build"

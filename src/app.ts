@@ -25,4 +25,4 @@ app.use(/^(?!\/api\/)/, (req, res) => {
 app.use('/api/categories', categories);
 app.use('/api/items', items);
 
-app.listen(4000, () => console.log('Server started on http://localhost:4000'));
+app.listen(4000, () => console.log('Server AAAA started on http://localhost:4000'));
