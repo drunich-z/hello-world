@@ -30,5 +30,5 @@
       "props": false
     }]
   },
-  "ignorePatterns": ["*config.js"]
+  "ignorePatterns": ["*config.js", "node_modules/", "dist/", "*.cards.js"]
 }
