@@ -25,4 +25,5 @@ app.use(/^(?!\/api\/)/, (req, res) => {
 app.use('/api/categories', categories);
 app.use('/api/items', items);
 
-app.listen(4000, () => console.log('Server AAAA started on http://localhost:4000'));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server EFK-SRV started on ${PORT} port`));
