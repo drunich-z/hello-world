@@ -1,5 +1,4 @@
-import { Category, Item } from '../common/interfaces';
-// import { Item } from './interfaces';
+import { Category, Card } from '../common/interfaces';
 
 const categories: Category[] = [
   {
@@ -46,39 +45,41 @@ export function deleteCategory(id: number): Promise<void> {
 
 // ***********************************************************
 
-const items: Item[] = [
+const items: Card[] = [
   {
-    name: 'Test item',
-    price: 100,
-    description: 'test description',
-    categoryId: 1,
+    id: 0,
+    word: 'cry',
+    translation: 'плакать',
+    image: 'https://efk-srv.herokuapp.com/media/img/cry.jpg',
+    audio: 'https://efk-srv.herokuapp.com/media/audio/cry.mp3',
+    categoryId: 0,
   },
 ];
 
-export function getItems(): Promise<Item[]> {
-  return Promise.resolve<Item[]>(items);
+export function getItems(): Promise<Card[]> {
+  return Promise.resolve<Card[]>(items);
 }
 
-export function getItemByName(name: string): Promise<Item | undefined> {
-  return Promise.resolve(items.find((it) => it.name.toLowerCase() === name.toLowerCase()));
+export function getItemByName(name: string): Promise<Card | undefined> {
+  return Promise.resolve(items.find((it) => it.word.toLowerCase() === name.toLowerCase()));
 }
 
-export function createItem(item: Item): Promise<Item> {
-  const isExist = typeof items.find((it) => it.name.toLowerCase() === item.name.toLowerCase()) !== 'undefined';
+export function createItem(item: Card): Promise<Card> {
+  const isExist = typeof items.find((it) => it.word.toLowerCase() === item.word.toLowerCase()) !== 'undefined';
   if (isExist) {
-    return Promise.reject(new Error(`Item with name ${item.name} is already exists.`));
+    return Promise.reject(new Error(`Item with name ${item.word} is already exists.`));
   }
   items.push(item);
   return Promise.resolve(item);
 }
 
-export function updateItem(item: Item): Promise<Item> {
-  const itemIndex = items.findIndex((it) => it.name.toLowerCase() === item.name.toLowerCase());
+export function updateItem(item: Card): Promise<Card> {
+  const itemIndex = items.findIndex((it) => it.word.toLowerCase() === item.word.toLowerCase());
   if (itemIndex < 0) {
     return Promise.reject(new Error('Item not found'));
   }
   const existsItem = items.splice(itemIndex, 1)[0];
-  const newItem: Item = {
+  const newItem: Card = {
     ...existsItem,
     ...item,
   };
@@ -87,7 +88,7 @@ export function updateItem(item: Item): Promise<Item> {
 }
 
 export function deleteItem(name: string): Promise<void> {
-  const index = items.findIndex((it) => it.name.toLowerCase() === name.toLowerCase());
+  const index = items.findIndex((it) => it.word.toLowerCase() === name.toLowerCase());
   if (index < 0) {
     Promise.reject(new Error('Item not found.'));
   }

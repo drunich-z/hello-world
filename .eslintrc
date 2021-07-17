@@ -30,5 +30,12 @@
       "props": false
     }]
   },
-  "ignorePatterns": ["*config.js", "node_modules/", "dist/", "*.cards.js"]
+  "ignorePatterns": [
+    "*config.js",
+    "node_modules/",
+    "dist/",
+    "*.cards.js",
+    ".vscode/",
+    ".temp/"
+  ]
 }

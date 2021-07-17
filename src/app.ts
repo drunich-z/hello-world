@@ -12,6 +12,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
+console.warn('hekk');
+
 const publicPath = path.resolve(__dirname, '../public');
 const indexPath = path.resolve(__dirname, '../public/index.html');
 

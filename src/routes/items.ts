@@ -8,7 +8,7 @@ import {
   updateItem,
   getCategoryById,
 } from '../storage/repository';
-import { Item } from '../common/interfaces';
+import { Card } from '../common/interfaces';
 // import { getCategoryById } from '../category/repository';
 
 const router = Router();
@@ -42,7 +42,7 @@ router.delete('/:name', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-  const data = req.body as Item;
+  const data = req.body as Card;
   const category = await getCategoryById(data.categoryId);
   if (!category) {
     return res.status(StatusCodes.BadRequest).send('Invalid category ID');
@@ -56,7 +56,7 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/', async (req, res) => {
-  const data = req.body as Item;
+  const data = req.body as Card;
   const category = await getCategoryById(data.categoryId);
   if (!category) {
     return res.status(StatusCodes.BadRequest).send('Invalid category ID');

@@ -1,9 +1,10 @@
-export interface Item {
-  name: string;
-  price: number;
-  categoryId: number;
-  description?: string;
-  image?: string;
+export interface Card {
+  id: number,
+  word: string,
+  translation: string,
+  image: string,
+  audio: string,
+  categoryId: number
 }
 
 export interface Category {
