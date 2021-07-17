@@ -4,7 +4,12 @@ import { StatusCodes } from '../common/status-codes';
 
 import {
   getAllCategories,
-} from '../storage/fs';
+  getCategoryById,
+  createCategory,
+  updateCategory,
+  deleteCategory,
+}
+  from '../storage/fs';
 
 import { Category } from '../common/interfaces';
 
@@ -18,86 +23,58 @@ router.get('/', async (req, res) => {
 
 // Get by id
 router.get('/:id', async (req, res) => {
-  res.json([]);
-  // const categoryId = Number(req.params.id);
-  // if (!categoryId) {
-  //   return res.status(StatusCodes.BadRequest);
-  // }
-  // const category = await getCategoryById(categoryId);
-  // if (!category) {
-  //   return res.sendStatus(StatusCodes.NotFound);
-  // }
-  // return res.json(category);
-});
-
-// Get by name
-router.get('/:name', async (req, res) => {
-  res.json([]);
-  // const categoryId = Number(req.params.id);
-  // if (!categoryId) {
-  //   return res.status(StatusCodes.BadRequest);
-  // }
-  // const category = await getCategoryById(categoryId);
-  // if (!category) {
-  //   return res.sendStatus(StatusCodes.NotFound);
-  // }
-  // return res.json(category);
+  const categoryId = Number(req.params.id);
+  if (!categoryId && categoryId !== 0) {
+    return res.sendStatus(StatusCodes.BadRequest);
+  }
+  const category = await getCategoryById(categoryId);
+  if (!category) {
+    return res.sendStatus(StatusCodes.NotFound);
+  }
+  return res.json(category);
 });
 
 // Create new category
-router.post('/', async (req, res) => {
-  res.json([]);
-  // const data = req.body as Category;
-  // if (!data.name) return res.sendStatus(StatusCodes.BadRequest);
-  // try {
-  //   const newCategory = await createCategory(data);
-  //   return res.json(newCategory);
-  // } catch (e) {
-  //   return res.status(StatusCodes.BadRequest).send(e);
-  // }
+router.put('/', async (req, res) => {
+  const data = req.body as Category;
+  if (!data.name) return res.sendStatus(StatusCodes.BadRequest);
+  try {
+    const newCategory = await createCategory(data);
+    return res.json(newCategory);
+  } catch (error) {
+    return res.status(StatusCodes.BadRequest).send(error.message);
+  }
 });
 
 // Update category
-router.put('/:id', async (req, res) => {
-  res.json([]);
-  // const data = req.body as Category;
-  // if (!data.name) return res.sendStatus(StatusCodes.BadRequest);
-  // try {
-  //   const newCategory = await createCategory(data);
-  //   return res.json(newCategory);
-  // } catch (e) {
-  //   return res.status(StatusCodes.BadRequest).send(e);
-  // }
-});
-
-// Delete categories
-router.delete('/', async (req, res) => {
-  res.json([]);
-  // const categoryId = Number(req.params.id);
-  // if (!categoryId) {
-  //   return res.status(StatusCodes.BadRequest);
-  // }
-  // try {
-  //   await deleteCategory(categoryId);
-  //   return res.sendStatus(StatusCodes.Ok);
-  // } catch (e) {
-  //   return res.status(StatusCodes.BadRequest).send(e);
-  // }
+router.post('/:id', async (req, res) => {
+  const categoryId = Number(req.params.id);
+  if (!categoryId && categoryId !== 0) {
+    return res.sendStatus(StatusCodes.BadRequest);
+  }
+  const data = req.body as Category;
+  if (!data.name) return res.sendStatus(StatusCodes.BadRequest);
+  try {
+    const updCategory = await updateCategory(data, categoryId);
+    return res.json(updCategory);
+  } catch (error) {
+    return res.status(StatusCodes.BadRequest).send(error.message);
+  }
 });
 
 // Delete category
 router.delete('/:id', async (req, res) => {
-  res.json([]);
-  // const categoryId = Number(req.params.id);
-  // if (!categoryId) {
-  //   return res.status(StatusCodes.BadRequest);
-  // }
-  // try {
-  //   await deleteCategory(categoryId);
-  //   return res.sendStatus(StatusCodes.Ok);
-  // } catch (e) {
-  //   return res.status(StatusCodes.BadRequest).send(e);
-  // }
+  const categoryId = Number(req.params.id);
+  if (!categoryId && categoryId !== 0) {
+    return res.sendStatus(StatusCodes.BadRequest);
+  }
+
+  try {
+    await deleteCategory(categoryId);
+    return res.status(StatusCodes.Ok).send(`category with id = ${categoryId} is deleted`);
+  } catch (error) {
+    return res.status(StatusCodes.BadRequest).send(error.message);
+  }
 });
 
 export default router;

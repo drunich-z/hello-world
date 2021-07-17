@@ -3,44 +3,68 @@ import { promises as fsp } from 'fs';
 import { Category, Card } from '../common/interfaces';
 import { readFromFile, writeToFile, getNewId } from '../common/utils';
 
-const CATEGORIES_DATA_FILE_PATH = './storage/fs/data-categories.json';
-// const categoryFileName = 'data-categories.json';
-// const categoryFilePath = `${__dirname}/fs/${categoryFileName}`;
+const DATA_CATEGORIES = './storage/data/data-categories.json';
 
 const getAllCategories = async (): Promise<Category[]> => {
-  const result = (await readFromFile(CATEGORIES_DATA_FILE_PATH)) as Category[];
+  const result = Promise.resolve<Category[]>(await readFromFile(DATA_CATEGORIES));
   return result;
 };
 
-const getCategoryById = async (id: number) => {};
+const getCategoryById = async (id: number): Promise<Category | undefined> => {
+  const result = Promise.resolve((await getAllCategories()).find((cat) => cat.id === id));
+  return result;
+};
 
-const getCategoryByName = async (name: string) => {};
+const createCategory = async (category: Category): Promise<Category> => {
+  const categories = await getAllCategories();
+  const isExist = typeof categories
+    .find((cat) => cat.name.toLowerCase() === category.name.toLowerCase()) !== 'undefined';
+  if (isExist) {
+    return Promise.reject(new Error(`Category with name ${category.name} is already exists`));
+  }
 
-const createCategory = async (category: Category) => {};
+  const id = await getNewId('idCategory');
+  const description = category.description === undefined ? '' : category.description;
+  const model = { ...category, id, description };
+  categories.push(model);
+  await writeToFile(DATA_CATEGORIES, categories);
+  return Promise.resolve(model);
+};
 
-const updateCategory = async (category: Category) => {};
+const updateCategory = async (category: Category, categoryId: number): Promise<Category> => {
+  const categories = await getAllCategories();
+  const updCategory = await getCategoryById(categoryId);
+  if (!updCategory) {
+    return Promise.reject(new Error(`Category with id = '${categoryId}' is not exists`));
+  }
+  const checkNameExist = categories.find((cat) => cat.name === category.name);
+  if (checkNameExist && checkNameExist.id !== categoryId) {
+    return Promise.reject(new Error(`Category with name ${category.name} is already exists and has another ID`));
+  }
 
-const removeCategory = async () => {};
+  const index = categories.findIndex((cat) => cat.id === categoryId);
+  categories[index] = { ...category, id: categoryId };
+  await writeToFile(DATA_CATEGORIES, categories);
+  return Promise.resolve(categories[index]);
+};
 
-// async getCategories(): Promise<Category[]> {
-//   const response = await fetch(BASE_CATEGORIES);
-//   const categories = await response.json();
-//   return categories;
-// };
+const deleteCategory = async (categoryId: number): Promise<Category> => {
+  const categories = await getAllCategories();
+  const delCategory = await getCategoryById(categoryId);
+  if (!delCategory) {
+    return Promise.reject(new Error(`Category with id = '${categoryId}' is not exists`));
+  }
 
-// async getCategoryByName(name: string): Promise<Category> {
-//   const response = await fetch(BASE_CATEGORIES);
-//   const categories = await response.json();
-//   const [result] = categories.filter((item: Category) => item.name === name);
-//   return result;
-// };
+  const index = categories.findIndex((cat) => cat.id === categoryId);
+  categories.splice(index, 1);
+  await writeToFile(DATA_CATEGORIES, categories);
+  return Promise.resolve(delCategory);
+};
 
-// async getCategoryById(id: number): Promise<Category> {
-//   const response = await fetch(BASE_CATEGORIES);
-//   const [categories] = await response.json();
-//   const [result] = Array(categories).filter((item) => item.id === id);
-//   return result;
-// };
 export {
   getAllCategories,
+  getCategoryById,
+  createCategory,
+  updateCategory,
+  deleteCategory,
 };

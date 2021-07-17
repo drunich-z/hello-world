@@ -1,6 +1,11 @@
 import { promises as fsp } from 'fs';
 
-const ID_COUNTER_FILE = './storage/fs/id-counter.json';
+const INITIAL_ID_COUNTER = './storage/initial/data/data-id-counter.json';
+const INITIAL_DATA_CATEGORIES = './storage/initial/data/data-categories.json';
+const INITIAL_DATA_CARDS = './storage/initial/data/data-cards.json';
+const DATA_ID_COUNTER = './storage/data/data-id-counter.json';
+const DATA_CATEGORIES = './storage/data/data-categories.json';
+const DATA_CARDS = './storage/data/data-cards.json';
 
 const readFromFile = async (filePath: string): Promise<any[]> => {
   const contents = await fsp.readFile(filePath, 'utf8');
@@ -22,7 +27,6 @@ const readFromFile = async (filePath: string): Promise<any[]> => {
 
     console.warn(`There was error while file-read: ${error.message}`);
   }
-  console.warn('fileread');
   return list;
 };
 
@@ -35,7 +39,7 @@ const writeToFile = async (filePath: string, list: any[]): Promise<any[]> => {
 };
 
 const getNewId = async (what: 'idCategory' | 'idCard'): Promise<number> => {
-  let [counter] = await readFromFile(ID_COUNTER_FILE);
+  let [counter] = await readFromFile(DATA_ID_COUNTER);
   let newId = -1;
 
   if (what === 'idCategory') {
@@ -46,12 +50,28 @@ const getNewId = async (what: 'idCategory' | 'idCard'): Promise<number> => {
     counter = { ...counter, idCard: newId };
   }
 
-  await writeToFile(ID_COUNTER_FILE, [counter]);
+  await writeToFile(DATA_ID_COUNTER, [counter]);
   return newId;
+};
+
+const reset = async (): Promise<void> => {
+  try {
+    let temp = await readFromFile(INITIAL_ID_COUNTER);
+    await writeToFile(DATA_ID_COUNTER, temp);
+
+    temp = await readFromFile(INITIAL_DATA_CATEGORIES);
+    await writeToFile(DATA_CATEGORIES, temp);
+
+    temp = await readFromFile(INITIAL_DATA_CARDS);
+    await writeToFile(DATA_CARDS, temp);
+  } catch (error) {
+    console.warn('there was an error:', error.message);
+  }
 };
 
 export {
   readFromFile,
   writeToFile,
   getNewId,
+  reset,
 };

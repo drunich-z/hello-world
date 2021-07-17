@@ -6,6 +6,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import categories from './routes/categories';
 import items from './routes/items';
+import reset from './routes/reset';
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -26,6 +27,7 @@ app.use(/^(?!\/api\/)/, (req, res) => {
 
 app.use('/api/categories', categories);
 app.use('/api/items', items);
+app.use('/api/reset', reset);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server EFK-SRV started on ${PORT} port`));
