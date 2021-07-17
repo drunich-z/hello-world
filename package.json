@@ -28,10 +28,10 @@
     "start-ts": "ts-node ./src/app.ts",
     "watch-ts": "nodemon",
     "lint": "eslint src --ext .ts,.js",
-    "postinstall": "tsc",
+    "postinstall": "npm run build",
     "start": "node dist/app.js",
     "prestart": "npm run build",
-    "build": "tsc"
+    "build": "tsc --project tsconfig.json"
   },
   "author": "drunich-z",
   "license": "ISC"
