@@ -30,7 +30,6 @@
     "lint": "eslint src --ext .ts,.js",
     "postinstall": "npm run build",
     "start": "node dist/app.js",
-    "prestart": "npm run build",
     "build": "tsc --project tsconfig.json"
   },
   "author": "drunich-z",
