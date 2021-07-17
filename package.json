@@ -28,6 +28,7 @@
     "start-ts": "ts-node ./src/app.ts",
     "watch-ts": "nodemon",
     "lint": "eslint src --ext .ts,.js",
+    "postinstall": "tsc",
     "start": "node dist/app.js",
     "prestart": "npm run build",
     "build": "tsc"
