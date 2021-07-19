@@ -47,7 +47,6 @@ export function deleteCategory(id: number): Promise<void> {
 
 const items: Card[] = [
   {
-    id: 0,
     word: 'cry',
     translation: 'плакать',
     image: 'https://efk-srv.herokuapp.com/media/img/cry.jpg',
@@ -56,41 +55,41 @@ const items: Card[] = [
   },
 ];
 
-export function getItems(): Promise<Card[]> {
+export function getAllCards(): Promise<Card[]> {
   return Promise.resolve<Card[]>(items);
 }
 
-export function getItemByName(name: string): Promise<Card | undefined> {
+export function getCardByName(name: string): Promise<Card | undefined> {
   return Promise.resolve(items.find((it) => it.word.toLowerCase() === name.toLowerCase()));
 }
 
-export function createItem(item: Card): Promise<Card> {
+export function createCard(item: Card): Promise<Card> {
   const isExist = typeof items.find((it) => it.word.toLowerCase() === item.word.toLowerCase()) !== 'undefined';
   if (isExist) {
-    return Promise.reject(new Error(`Item with name ${item.word} is already exists.`));
+    return Promise.reject(new Error(`Card with name ${item.word} is already exists.`));
   }
   items.push(item);
   return Promise.resolve(item);
 }
 
-export function updateItem(item: Card): Promise<Card> {
+export function updateCard(item: Card): Promise<Card> {
   const itemIndex = items.findIndex((it) => it.word.toLowerCase() === item.word.toLowerCase());
   if (itemIndex < 0) {
-    return Promise.reject(new Error('Item not found'));
+    return Promise.reject(new Error('Card not found'));
   }
-  const existsItem = items.splice(itemIndex, 1)[0];
-  const newItem: Card = {
-    ...existsItem,
+  const existsCard = items.splice(itemIndex, 1)[0];
+  const newCard: Card = {
+    ...existsCard,
     ...item,
   };
-  items.push(newItem);
-  return Promise.resolve(newItem);
+  items.push(newCard);
+  return Promise.resolve(newCard);
 }
 
-export function deleteItem(name: string): Promise<void> {
+export function deleteCard(name: string): Promise<void> {
   const index = items.findIndex((it) => it.word.toLowerCase() === name.toLowerCase());
   if (index < 0) {
-    Promise.reject(new Error('Item not found.'));
+    Promise.reject(new Error('Card not found.'));
   }
   items.splice(index, 1);
   return Promise.resolve();

@@ -1,17 +1,20 @@
 // change
 /* eslint-disable no-console */
+// import Multer from 'multer';
 import path from 'path';
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import categories from './routes/categories';
-import items from './routes/items';
+import cards from './routes/cards';
 import reset from './routes/reset';
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
+
+// const upload = Multer();
 
 console.warn('hekk');
 
@@ -26,7 +29,7 @@ app.use(/^(?!\/api\/)/, (req, res) => {
 });
 
 app.use('/api/categories', categories);
-app.use('/api/items', items);
+app.use('/api/cards', cards);
 app.use('/api/reset', reset);
 
 const PORT = process.env.PORT || 3000;

@@ -4,6 +4,7 @@ import { Category, Card } from '../common/interfaces';
 import { readFromFile, writeToFile, getNewId } from '../common/utils';
 
 const DATA_CATEGORIES = './storage/data/data-categories.json';
+const DATA_CARDS = './storage/data/data-cards.json';
 
 const getAllCategories = async (): Promise<Category[]> => {
   const result = Promise.resolve<Category[]>(await readFromFile(DATA_CATEGORIES));
@@ -61,10 +62,39 @@ const deleteCategory = async (categoryId: number): Promise<Category> => {
   return Promise.resolve(delCategory);
 };
 
+// *****************************************************
+
+const getAllCards = async (): Promise<Card[]> => {
+  const result = Promise.resolve<Card[]>(await readFromFile(DATA_CARDS));
+  return result;
+};
+
+const getCardByWord = async (word: string): Promise<Card | undefined> => {
+  const result = Promise.resolve((await getAllCards()).find((card) => card.word === word));
+  return result;
+};
+
+// TODO обработка файла с картинкой и звуком
+const createCard = async (cardParam: Card): Promise<Card> => {
+  const cards = await getAllCards();
+  const isExist = typeof cards
+    .find((card) => card.word.toLowerCase() === cardParam.word.toLowerCase()) !== 'undefined';
+  if (isExist) {
+    return Promise.reject(new Error(`Card with word ${cardParam.word} is already exists`));
+  }
+
+  cards.push(cardParam);
+  await writeToFile(DATA_CARDS, cards);
+  return Promise.resolve(cardParam);
+};
+
+
 export {
   getAllCategories,
   getCategoryById,
   createCategory,
   updateCategory,
   deleteCategory,
+  getAllCards,
+  getCardByWord,
 };
