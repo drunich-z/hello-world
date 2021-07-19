@@ -58,13 +58,11 @@ router.post('/', async (req, res) => {
     console.warn('files:', files);
     console.warn('fileparse', files.picture);
     console.warn('fileparse', files.path);
-    сonst test = (files.picture as unknown) as Formidable.File;
-    test.path
+    const fff = (files.picture as unknown) as Formidable.File;
+    // сonst test = (files.picture as unknown) as Formidable.File;
+    console.warn(fff.path);
 
-
-
-
-    console.warn('POST FORM DATA');
+     console.warn('POST FORM DATA');
     // fs.rename()
 
     // fs.createReadStream(files.picture.path).pipe(fs.createWriteStream(`${pictsPath}/${files.picture.name}`));
