@@ -1,6 +1,5 @@
 [
   {
-    "id": 0,
     "word": "cry",
     "translation": "плакать",
     "image": "https://efk-srv.herokuapp.com/media/img/cry.jpg",
@@ -8,7 +7,6 @@
     "categoryId": 0
   },
   {
-    "id": 1,
     "word": "dance",
     "translation": "танцевать",
     "image": "https://efk-srv.herokuapp.com/media/img/dance.jpg",
@@ -16,7 +14,6 @@
     "categoryId": 0
   },
   {
-    "id": 2,
     "word": "dive",
     "translation": "нырять",
     "image": "https://efk-srv.herokuapp.com/media/img/dive.jpg",
@@ -24,7 +21,6 @@
     "categoryId": 0
   },
   {
-    "id": 3,
     "word": "draw",
     "translation": "рисовать",
     "image": "https://efk-srv.herokuapp.com/media/img/draw.jpg",
@@ -32,7 +28,6 @@
     "categoryId": 0
   },
   {
-    "id": 4,
     "word": "fish",
     "translation": "ловить рыбу",
     "image": "https://efk-srv.herokuapp.com/media/img/fish.jpg",
@@ -40,7 +35,6 @@
     "categoryId": 0
   },
   {
-    "id": 5,
     "word": "fly",
     "translation": "летать",
     "image": "https://efk-srv.herokuapp.com/media/img/fly.jpg",
@@ -48,7 +42,6 @@
     "categoryId": 0
   },
   {
-    "id": 6,
     "word": "hug",
     "translation": "обнимать",
     "image": "https://efk-srv.herokuapp.com/media/img/hug.jpg",
@@ -56,7 +49,6 @@
     "categoryId": 0
   },
   {
-    "id": 7,
     "word": "jump",
     "translation": "прыгать",
     "image": "https://efk-srv.herokuapp.com/media/img/jump.jpg",
@@ -64,7 +56,6 @@
     "categoryId": 0
   },
   {
-    "id": 8,
     "word": "open",
     "translation": "открывать",
     "image": "https://efk-srv.herokuapp.com/media/img/open.jpg",
@@ -72,7 +63,6 @@
     "categoryId": 1
   },
   {
-    "id": 9,
     "word": "play",
     "translation": "играть",
     "image": "https://efk-srv.herokuapp.com/media/img/play.jpg",
@@ -80,7 +70,6 @@
     "categoryId": 1
   },
   {
-    "id": 10,
     "word": "point",
     "translation": "указывать",
     "image": "https://efk-srv.herokuapp.com/media/img/point.jpg",
@@ -88,7 +77,6 @@
     "categoryId": 1
   },
   {
-    "id": 11,
     "word": "ride",
     "translation": "ездить",
     "image": "https://efk-srv.herokuapp.com/media/img/ride.jpg",
@@ -96,7 +84,6 @@
     "categoryId": 1
   },
   {
-    "id": 12,
     "word": "run",
     "translation": "бегать",
     "image": "https://efk-srv.herokuapp.com/media/img/run.jpg",
@@ -104,7 +91,6 @@
     "categoryId": 1
   },
   {
-    "id": 13,
     "word": "sing",
     "translation": "петь",
     "image": "https://efk-srv.herokuapp.com/media/img/sing.jpg",
@@ -112,7 +98,6 @@
     "categoryId": 1
   },
   {
-    "id": 14,
     "word": "skip",
     "translation": "пропускать, прыгать",
     "image": "https://efk-srv.herokuapp.com/media/img/skip.jpg",
@@ -120,7 +105,6 @@
     "categoryId": 1
   },
   {
-    "id": 15,
     "word": "swim",
     "translation": "плавать",
     "image": "https://efk-srv.herokuapp.com/media/img/swim.jpg",
@@ -128,7 +112,6 @@
     "categoryId": 1
   },
   {
-    "id": 16,
     "word": "cat",
     "translation": "кот",
     "image": "https://efk-srv.herokuapp.com/media/img/cat.jpg",
@@ -136,7 +119,6 @@
     "categoryId": 2
   },
   {
-    "id": 17,
     "word": "chick",
     "translation": "цыплёнок",
     "image": "https://efk-srv.herokuapp.com/media/img/chick.jpg",
@@ -144,7 +126,6 @@
     "categoryId": 2
   },
   {
-    "id": 18,
     "word": "chicken",
     "translation": "курица",
     "image": "https://efk-srv.herokuapp.com/media/img/chicken.jpg",
@@ -152,7 +133,6 @@
     "categoryId": 2
   },
   {
-    "id": 19,
     "word": "dog",
     "translation": "собака",
     "image": "https://efk-srv.herokuapp.com/media/img/dog.jpg",
@@ -160,7 +140,6 @@
     "categoryId": 2
   },
   {
-    "id": 20,
     "word": "horse",
     "translation": "лошадь",
     "image": "https://efk-srv.herokuapp.com/media/img/horse.jpg",
@@ -168,7 +147,6 @@
     "categoryId": 2
   },
   {
-    "id": 21,
     "word": "pig",
     "translation": "свинья",
     "image": "https://efk-srv.herokuapp.com/media/img/pig.jpg",
@@ -176,7 +154,6 @@
     "categoryId": 2
   },
   {
-    "id": 22,
     "word": "rabbit",
     "translation": "кролик",
     "image": "https://efk-srv.herokuapp.com/media/img/rabbit.jpg",
@@ -184,7 +161,6 @@
     "categoryId": 2
   },
   {
-    "id": 23,
     "word": "sheep",
     "translation": "овца",
     "image": "https://efk-srv.herokuapp.com/media/img/sheep.jpg",
@@ -192,7 +168,6 @@
     "categoryId": 2
   },
   {
-    "id": 24,
     "word": "bird",
     "translation": "птица",
     "image": "https://efk-srv.herokuapp.com/media/img/bird.jpg",
@@ -200,7 +175,6 @@
     "categoryId": 3
   },
   {
-    "id": 25,
     "word": "fish",
     "translation": "рыба",
     "image": "https://efk-srv.herokuapp.com/media/img/fish1.jpg",
@@ -208,7 +182,6 @@
     "categoryId": 3
   },
   {
-    "id": 26,
     "word": "frog",
     "translation": "жаба",
     "image": "https://efk-srv.herokuapp.com/media/img/frog.jpg",
@@ -216,7 +189,6 @@
     "categoryId": 3
   },
   {
-    "id": 27,
     "word": "giraffe",
     "translation": "жирафа",
     "image": "https://efk-srv.herokuapp.com/media/img/giraffe.jpg",
@@ -224,7 +196,6 @@
     "categoryId": 3
   },
   {
-    "id": 28,
     "word": "lion",
     "translation": "лев",
     "image": "https://efk-srv.herokuapp.com/media/img/lion.jpg",
@@ -232,7 +203,6 @@
     "categoryId": 3
   },
   {
-    "id": 29,
     "word": "mouse",
     "translation": "мышь",
     "image": "https://efk-srv.herokuapp.com/media/img/mouse.jpg",
@@ -240,7 +210,6 @@
     "categoryId": 3
   },
   {
-    "id": 30,
     "word": "turtle",
     "translation": "черепаха",
     "image": "https://efk-srv.herokuapp.com/media/img/turtle.jpg",
@@ -248,7 +217,6 @@
     "categoryId": 3
   },
   {
-    "id": 31,
     "word": "dolphin",
     "translation": "дельфин",
     "image": "https://efk-srv.herokuapp.com/media/img/dolphin.jpg",
@@ -256,7 +224,6 @@
     "categoryId": 3
   },
   {
-    "id": 32,
     "word": "skirt",
     "translation": "юбка",
     "image": "https://efk-srv.herokuapp.com/media/img/skirt.jpg",
@@ -264,7 +231,6 @@
     "categoryId": 4
   },
   {
-    "id": 33,
     "word": "pants",
     "translation": "брюки",
     "image": "https://efk-srv.herokuapp.com/media/img/pants.jpg",
@@ -272,7 +238,6 @@
     "categoryId": 4
   },
   {
-    "id": 34,
     "word": "blouse",
     "translation": "блузка",
     "image": "https://efk-srv.herokuapp.com/media/img/blouse.jpg",
@@ -280,7 +245,6 @@
     "categoryId": 4
   },
   {
-    "id": 35,
     "word": "dress",
     "translation": "платье",
     "image": "https://efk-srv.herokuapp.com/media/img/dress.jpg",
@@ -288,7 +252,6 @@
     "categoryId": 4
   },
   {
-    "id": 36,
     "word": "boot",
     "translation": "ботинок",
     "image": "https://efk-srv.herokuapp.com/media/img/boot.jpg",
@@ -296,7 +259,6 @@
     "categoryId": 4
   },
   {
-    "id": 37,
     "word": "shirt",
     "translation": "рубашка",
     "image": "https://efk-srv.herokuapp.com/media/img/shirt.jpg",
@@ -304,7 +266,6 @@
     "categoryId": 4
   },
   {
-    "id": 38,
     "word": "coat",
     "translation": "пальто",
     "image": "https://efk-srv.herokuapp.com/media/img/coat.jpg",
@@ -312,7 +273,6 @@
     "categoryId": 4
   },
   {
-    "id": 39,
     "word": "shoe",
     "translation": "туфли",
     "image": "https://efk-srv.herokuapp.com/media/img/shoe.jpg",
@@ -320,7 +280,6 @@
     "categoryId": 4
   },
   {
-    "id": 40,
     "word": "sad",
     "translation": "грустный",
     "image": "https://efk-srv.herokuapp.com/media/img/sad.jpg",
@@ -328,7 +287,6 @@
     "categoryId": 5
   },
   {
-    "id": 41,
     "word": "angry",
     "translation": "сердитый",
     "image": "https://efk-srv.herokuapp.com/media/img/angry.jpg",
@@ -336,7 +294,6 @@
     "categoryId": 5
   },
   {
-    "id": 42,
     "word": "happy",
     "translation": "счастливый",
     "image": "https://efk-srv.herokuapp.com/media/img/happy.jpg",
@@ -344,7 +301,6 @@
     "categoryId": 5
   },
   {
-    "id": 43,
     "word": "tired",
     "translation": "уставший",
     "image": "https://efk-srv.herokuapp.com/media/img/tired.jpg",
@@ -352,7 +308,6 @@
     "categoryId": 5
   },
   {
-    "id": 44,
     "word": "surprised",
     "translation": "удивлённый",
     "image": "https://efk-srv.herokuapp.com/media/img/surprised.jpg",
@@ -360,7 +315,6 @@
     "categoryId": 5
   },
   {
-    "id": 45,
     "word": "scared",
     "translation": "испуганный",
     "image": "https://efk-srv.herokuapp.com/media/img/scared.jpg",
@@ -368,7 +322,6 @@
     "categoryId": 5
   },
   {
-    "id": 46,
     "word": "smile",
     "translation": "улыбка",
     "image": "https://efk-srv.herokuapp.com/media/img/smile.jpg",
@@ -376,7 +329,6 @@
     "categoryId": 5
   },
   {
-    "id": 47,
     "word": "laugh",
     "translation": "смех",
     "image": "https://efk-srv.herokuapp.com/media/img/laugh.jpg",
@@ -384,7 +336,6 @@
     "categoryId": 5
   },
   {
-    "id": 48,
     "word": "beach",
     "translation": "пляж",
     "image": "https://efk-srv.herokuapp.com/media/img/beach.jpg",
@@ -392,7 +343,6 @@
     "categoryId": 6
   },
   {
-    "id": 49,
     "word": "desert",
     "translation": "пустыня",
     "image": "https://efk-srv.herokuapp.com/media/img/desert.jpg",
@@ -400,7 +350,6 @@
     "categoryId": 6
   },
   {
-    "id": 50,
     "word": "forest",
     "translation": "лес",
     "image": "https://efk-srv.herokuapp.com/media/img/forest.jpg",
@@ -408,7 +357,6 @@
     "categoryId": 6
   },
   {
-    "id": 51,
     "word": "island",
     "translation": "остров",
     "image": "https://efk-srv.herokuapp.com/media/img/island.jpg",
@@ -416,7 +364,6 @@
     "categoryId": 6
   },
   {
-    "id": 52,
     "word": "lake",
     "translation": "озеро",
     "image": "https://efk-srv.herokuapp.com/media/img/lake.jpg",
@@ -424,7 +371,6 @@
     "categoryId": 6
   },
   {
-    "id": 53,
     "word": "sea",
     "translation": "море",
     "image": "https://efk-srv.herokuapp.com/media/img/sea.jpg",
@@ -432,7 +378,6 @@
     "categoryId": 6
   },
   {
-    "id": 54,
     "word": "river",
     "translation": "река",
     "image": "https://efk-srv.herokuapp.com/media/img/river.jpg",
@@ -440,7 +385,6 @@
     "categoryId": 6
   },
   {
-    "id": 55,
     "word": "volcano",
     "translation": "вулкан",
     "image": "https://efk-srv.herokuapp.com/media/img/volcano.jpg",
@@ -448,7 +392,6 @@
     "categoryId": 6
   },
   {
-    "id": 56,
     "word": "apple",
     "translation": "яблоко",
     "image": "https://efk-srv.herokuapp.com/media/img/apple.jpg",
@@ -456,7 +399,6 @@
     "categoryId": 7
   },
   {
-    "id": 57,
     "word": "banana",
     "translation": "банан",
     "image": "https://efk-srv.herokuapp.com/media/img/banana.jpg",
@@ -464,7 +406,6 @@
     "categoryId": 7
   },
   {
-    "id": 58,
     "word": "bread",
     "translation": "хлеб",
     "image": "https://efk-srv.herokuapp.com/media/img/bread.jpg",
@@ -472,7 +413,6 @@
     "categoryId": 7
   },
   {
-    "id": 59,
     "word": "cake",
     "translation": "пироженное",
     "image": "https://efk-srv.herokuapp.com/media/img/cake.jpg",
@@ -480,7 +420,6 @@
     "categoryId": 7
   },
   {
-    "id": 60,
     "word": "cheese",
     "translation": "сыр",
     "image": "https://efk-srv.herokuapp.com/media/img/cheese.jpg",
@@ -488,7 +427,6 @@
     "categoryId": 7
   },
   {
-    "id": 61,
     "word": "egg",
     "translation": "яйцо",
     "image": "https://efk-srv.herokuapp.com/media/img/egg.jpg",
@@ -496,7 +434,6 @@
     "categoryId": 7
   },
   {
-    "id": 62,
     "word": "milk",
     "translation": "молоко",
     "image": "https://efk-srv.herokuapp.com/media/img/milk.jpg",
@@ -504,7 +441,6 @@
     "categoryId": 7
   },
   {
-    "id": 63,
     "word": "potato",
     "translation": "бульба",
     "image": "https://efk-srv.herokuapp.com/media/img/potato.jpg",

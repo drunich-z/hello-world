@@ -1,11 +1,24 @@
-import { promises as fsp } from 'fs';
+import fs from 'fs';
+import path from 'path';
 
 import { Category, Card } from '../common/interfaces';
-import { readFromFile, writeToFile, getNewId } from '../common/utils';
+import {
+  readFromFile,
+  writeToFile,
+  getNewId,
+  getFileName,
+} from '../common/utils';
 
 const DATA_CATEGORIES = './storage/data/data-categories.json';
 const DATA_CARDS = './storage/data/data-cards.json';
 
+const pictsPath = path.resolve(__dirname, '../../public/media/img/');
+const soundsPath = path.resolve(__dirname, '../../public/media/audio/');
+
+const PUBLIC_SOUND_PATH = 'https://efk-srv.herokuapp.com/media/audio/';
+const PUBLIC_PICTURE_PATH = 'https://efk-srv.herokuapp.com/media/img/';
+
+// ***************************************************************************************
 const getAllCategories = async (): Promise<Category[]> => {
   const result = Promise.resolve<Category[]>(await readFromFile(DATA_CATEGORIES));
   return result;
@@ -74,20 +87,67 @@ const getCardByWord = async (word: string): Promise<Card | undefined> => {
   return result;
 };
 
-// TODO обработка файла с картинкой и звуком
-const createCard = async (cardParam: Card): Promise<Card> => {
-  const cards = await getAllCards();
-  const isExist = typeof cards
-    .find((card) => card.word.toLowerCase() === cardParam.word.toLowerCase()) !== 'undefined';
-  if (isExist) {
-    return Promise.reject(new Error(`Card with word ${cardParam.word} is already exists`));
-  }
-
-  cards.push(cardParam);
-  await writeToFile(DATA_CARDS, cards);
-  return Promise.resolve(cardParam);
+const getCardsByCategoryId = async (catId: number): Promise<Card[] | undefined> => {
+  const result = Promise.resolve((await getAllCards()).filter((card) => card.categoryId === catId));
+  return result;
 };
 
+const createCard = async (newCard: Card, uploadedPicture: string,
+  uploadedSound: string): Promise<Card> => {
+  const cards = await getAllCards();
+  const isExist = typeof cards
+    .find((card) => card.word.toLowerCase() === newCard.word.toLowerCase()) !== 'undefined';
+  if (isExist) {
+    return Promise.reject(new Error(`Card with word ${newCard.word} is already exists`));
+  }
+
+  const soundToCreate = path.join(soundsPath, getFileName(newCard.audio));
+  const pictureToCreate = path.join(pictsPath, getFileName(newCard.image));
+
+  try {
+    cards.push(newCard);
+    await writeToFile(DATA_CARDS, cards);
+    fs.rename(uploadedPicture, pictureToCreate, (error) => {
+      if (error) throw error;
+    });
+    fs.rename(uploadedSound, soundToCreate, (error) => {
+      if (error) throw error;
+    });
+  } catch (error) {
+    return Promise.reject(error);
+  }
+
+  return Promise.resolve(newCard);
+};
+
+const deleteCard = async (wordParam: string): Promise<Card> => {
+  const cards = await getAllCards();
+  const delCard = cards.find((card) => card.word.toLowerCase() === wordParam.toLowerCase());
+  if (!delCard) {
+    return Promise.reject(new Error(`Card with word = "${wordParam}" is not exists`));
+  }
+
+  const soundToDel = path.join(soundsPath, getFileName(delCard.audio));
+  const pictureToDel = path.join(pictsPath, getFileName(delCard.image));
+
+  try {
+    const index = cards.findIndex((card) => card.word === wordParam);
+    cards.splice(index, 1);
+    await writeToFile(DATA_CARDS, cards);
+    fs.unlink(soundToDel, (error) => {
+      if (error) return Promise.reject(error);
+      return ('file deleted');
+    });
+    fs.unlink(pictureToDel, (error) => {
+      if (error) return Promise.reject(error);
+      return ('file deleted');
+    });
+  } catch (error) {
+    return Promise.reject(error);
+  }
+
+  return Promise.resolve(delCard);
+};
 
 export {
   getAllCategories,
@@ -97,4 +157,7 @@ export {
   deleteCategory,
   getAllCards,
   getCardByWord,
+  getCardsByCategoryId,
+  createCard,
+  deleteCard,
 };
