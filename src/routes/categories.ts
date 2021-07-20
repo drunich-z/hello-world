@@ -8,6 +8,7 @@ import {
   createCategory,
   updateCategory,
   deleteCategory,
+  getCardsByCategoryId,
 }
   from '../storage/fs';
 
@@ -31,6 +32,10 @@ router.get('/:id', async (req, res) => {
   if (!category) {
     return res.sendStatus(StatusCodes.NotFound);
   }
+  let cardsCount = 0;
+  const cards = await getCardsByCategoryId(categoryId);
+  if (cards) cardsCount = cards.length;
+  res.setHeader('cardsCount', cardsCount);
   return res.json(category);
 });
 
