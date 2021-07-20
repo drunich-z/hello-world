@@ -1,6 +1,3 @@
-// change
-/* eslint-disable no-console */
-// import Multer from 'multer';
 import path from 'path';
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -13,10 +10,6 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
-
-// const upload = Multer();
-
-console.warn('hekk');
 
 const publicPath = path.resolve(__dirname, '../public');
 const indexPath = path.resolve(__dirname, '../public/index.html');

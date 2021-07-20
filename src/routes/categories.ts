@@ -71,7 +71,7 @@ router.delete('/:id', async (req, res) => {
 
   try {
     await deleteCategory(categoryId);
-    return res.status(StatusCodes.Ok).send(`category with id = ${categoryId} is deleted`);
+    return res.status(StatusCodes.Ok).send(`category with id = ${categoryId} is deleted. And all cards of it`);
   } catch (error) {
     return res.status(StatusCodes.BadRequest).send(error.message);
   }
