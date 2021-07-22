@@ -23,6 +23,7 @@ const router = Router();
 const PUBLIC_SOUND_PATH = 'https://efk-srv.herokuapp.com/media/audio/';
 const PUBLIC_PICTURE_PATH = 'https://efk-srv.herokuapp.com/media/img/';
 
+//  get all cards
 router.get('/', async (req, res) => {
   try {
     const data = await getAllCards();
@@ -32,6 +33,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// get all cards of the category
 router.get('/category/:id', async (req, res) => {
   try {
     const id = Number(req.params.id);
@@ -44,6 +46,7 @@ router.get('/category/:id', async (req, res) => {
   }
 });
 
+// get card by name (i guess that name is uniq)
 router.get('/:name', async (req, res) => {
   try {
     const data = await getCardByWord(req.params.name);
@@ -54,6 +57,7 @@ router.get('/:name', async (req, res) => {
   }
 });
 
+// delete card by name
 router.delete('/:name', async (req, res) => {
   const delWord = req.params.name;
   try {
@@ -64,6 +68,7 @@ router.delete('/:name', async (req, res) => {
   }
 });
 
+// create new card
 router.post('/', async (req, res) => {
   const formData = Formidable({ multiples: true });
   const newCard: Card = {
@@ -108,7 +113,8 @@ router.post('/', async (req, res) => {
   }
 });
 
-// router.put('/', async (req, res) => {
+// update card (word = name)
+// router.put('/:name', async (req, res) => {
 //   const data = req.body as Card;
 //   const category = await getCategoryById(data.categoryId);
 //   if (!category) {
