@@ -1,3 +1,4 @@
+import path from 'path';
 import Formidable, { Fields } from 'formidable';
 import { Router } from 'express';
 import { StatusCodes } from '../common';
@@ -20,6 +21,7 @@ const router = Router();
 
 // const pictsPath = path.resolve(__dirname, '../../public/media/img');
 // const soundsPath = path.resolve(__dirname, '../../public/media/audio');
+const UPLOAD_PATH = path.resolve(__dirname, '../../public/upload');
 const PUBLIC_SOUND_PATH = 'https://efk-srv.herokuapp.com/media/audio/';
 const PUBLIC_PICTURE_PATH = 'https://efk-srv.herokuapp.com/media/img/';
 
@@ -27,6 +29,7 @@ const PUBLIC_PICTURE_PATH = 'https://efk-srv.herokuapp.com/media/img/';
 router.get('/', async (req, res) => {
   try {
     const data = await getAllCards();
+    res.setHeader('Access-Control-Allow-Origin', '*');
     return res.json(data);
   } catch (error) {
     return res.status(StatusCodes.BadRequest).send(error.message);
@@ -40,6 +43,7 @@ router.get('/category/:id', async (req, res) => {
     if (!id && id !== 0) return res.sendStatus(StatusCodes.NotFound);
     const data = await getCardsByCategoryId(id);
     if (!data) return res.sendStatus(StatusCodes.NotFound);
+    res.setHeader('Access-Control-Allow-Origin', '*');
     return res.json(data);
   } catch (e) {
     return res.status(StatusCodes.BadRequest).send(e);
@@ -51,6 +55,7 @@ router.get('/:name', async (req, res) => {
   try {
     const data = await getCardByWord(req.params.name);
     if (!data) return res.sendStatus(StatusCodes.NotFound);
+    res.setHeader('Access-Control-Allow-Origin', '*');
     return res.json(data);
   } catch (e) {
     return res.status(StatusCodes.BadRequest).send(e);
@@ -62,6 +67,7 @@ router.delete('/:name', async (req, res) => {
   const delWord = req.params.name;
   try {
     const data = await deleteCard(delWord);
+    res.setHeader('Access-Control-Allow-Origin', '*');
     return res.json(data);
   } catch (e) {
     return res.status(StatusCodes.BadRequest).send(e.message);
@@ -70,7 +76,8 @@ router.delete('/:name', async (req, res) => {
 
 // create new card
 router.post('/', async (req, res) => {
-  const formData = Formidable({ multiples: true });
+  const formData = Formidable({ multiples: true, uploadDir: UPLOAD_PATH });
+
   const newCard: Card = {
     word: '',
     translation: '',
@@ -103,6 +110,7 @@ router.post('/', async (req, res) => {
       }
       try {
         const data = await createCard(newCard, uploadPicture, uploadedSound);
+        res.setHeader('Access-Control-Allow-Origin', '*');
         return res.json(data);
       } catch (error) {
         return res.status(StatusCodes.BadRequest).send(error.message);

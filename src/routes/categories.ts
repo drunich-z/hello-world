@@ -19,6 +19,7 @@ const router = Router();
 // Get all categories
 router.get('/', async (req, res) => {
   const allCategories = await getAllCategories();
+  res.setHeader('Access-Control-Allow-Origin', '*');
   return res.json(allCategories);
 });
 
@@ -36,6 +37,7 @@ router.get('/:id', async (req, res) => {
   const cards = await getCardsByCategoryId(categoryId);
   if (cards) cardsCount = cards.length;
   res.setHeader('cardsCount', cardsCount);
+  res.setHeader('Access-Control-Allow-Origin', '*');
   return res.json(category);
 });
 
@@ -45,6 +47,7 @@ router.put('/', async (req, res) => {
   if (!data.name) return res.sendStatus(StatusCodes.BadRequest);
   try {
     const newCategory = await createCategory(data);
+    res.setHeader('Access-Control-Allow-Origin', '*');
     return res.json(newCategory);
   } catch (error) {
     return res.status(StatusCodes.BadRequest).send(error.message);
@@ -61,6 +64,7 @@ router.post('/:id', async (req, res) => {
   if (!data.name) return res.sendStatus(StatusCodes.BadRequest);
   try {
     const updCategory = await updateCategory(data, categoryId);
+    res.setHeader('Access-Control-Allow-Origin', '*');
     return res.json(updCategory);
   } catch (error) {
     return res.status(StatusCodes.BadRequest).send(error.message);

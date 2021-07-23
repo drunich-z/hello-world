@@ -1,0 +1,450 @@
+[
+  {
+    "word": "cry",
+    "translation": "плакать",
+    "image": "http://localhost:3000/media/img/cry.jpg",
+    "audio": "http://localhost:3000/media/audio/cry.mp3",
+    "categoryId": 0
+  },
+  {
+    "word": "dance",
+    "translation": "танцевать",
+    "image": "http://localhost:3000/media/img/dance.jpg",
+    "audio": "http://localhost:3000/media/audio/dance.mp3",
+    "categoryId": 0
+  },
+  {
+    "word": "dive",
+    "translation": "нырять",
+    "image": "http://localhost:3000/media/img/dive.jpg",
+    "audio": "http://localhost:3000/media/audio/dive.mp3",
+    "categoryId": 0
+  },
+  {
+    "word": "draw",
+    "translation": "рисовать",
+    "image": "http://localhost:3000/media/img/draw.jpg",
+    "audio": "http://localhost:3000/media/audio/draw.mp3",
+    "categoryId": 0
+  },
+  {
+    "word": "fish",
+    "translation": "ловить рыбу",
+    "image": "http://localhost:3000/media/img/fish.jpg",
+    "audio": "http://localhost:3000/media/audio/fish.mp3",
+    "categoryId": 0
+  },
+  {
+    "word": "fly",
+    "translation": "летать",
+    "image": "http://localhost:3000/media/img/fly.jpg",
+    "audio": "http://localhost:3000/media/audio/fly.mp3",
+    "categoryId": 0
+  },
+  {
+    "word": "hug",
+    "translation": "обнимать",
+    "image": "http://localhost:3000/media/img/hug.jpg",
+    "audio": "http://localhost:3000/media/audio/hug.mp3",
+    "categoryId": 0
+  },
+  {
+    "word": "jump",
+    "translation": "прыгать",
+    "image": "http://localhost:3000/media/img/jump.jpg",
+    "audio": "http://localhost:3000/media/audio/jump.mp3",
+    "categoryId": 0
+  },
+  {
+    "word": "open",
+    "translation": "открывать",
+    "image": "http://localhost:3000/media/img/open.jpg",
+    "audio": "http://localhost:3000/media/audio/open.mp3",
+    "categoryId": 1
+  },
+  {
+    "word": "play",
+    "translation": "играть",
+    "image": "http://localhost:3000/media/img/play.jpg",
+    "audio": "http://localhost:3000/media/audio/play.mp3",
+    "categoryId": 1
+  },
+  {
+    "word": "point",
+    "translation": "указывать",
+    "image": "http://localhost:3000/media/img/point.jpg",
+    "audio": "http://localhost:3000/media/audio/point.mp3",
+    "categoryId": 1
+  },
+  {
+    "word": "ride",
+    "translation": "ездить",
+    "image": "http://localhost:3000/media/img/ride.jpg",
+    "audio": "http://localhost:3000/media/audio/ride.mp3",
+    "categoryId": 1
+  },
+  {
+    "word": "run",
+    "translation": "бегать",
+    "image": "http://localhost:3000/media/img/run.jpg",
+    "audio": "http://localhost:3000/media/audio/run.mp3",
+    "categoryId": 1
+  },
+  {
+    "word": "sing",
+    "translation": "петь",
+    "image": "http://localhost:3000/media/img/sing.jpg",
+    "audio": "http://localhost:3000/media/audio/sing.mp3",
+    "categoryId": 1
+  },
+  {
+    "word": "skip",
+    "translation": "пропускать, прыгать",
+    "image": "http://localhost:3000/media/img/skip.jpg",
+    "audio": "http://localhost:3000/media/audio/skip.mp3",
+    "categoryId": 1
+  },
+  {
+    "word": "swim",
+    "translation": "плавать",
+    "image": "http://localhost:3000/media/img/swim.jpg",
+    "audio": "http://localhost:3000/media/audio/swim.mp3",
+    "categoryId": 1
+  },
+  {
+    "word": "cat",
+    "translation": "кот",
+    "image": "http://localhost:3000/media/img/cat.jpg",
+    "audio": "http://localhost:3000/media/audio/cat.mp3",
+    "categoryId": 2
+  },
+  {
+    "word": "chick",
+    "translation": "цыплёнок",
+    "image": "http://localhost:3000/media/img/chick.jpg",
+    "audio": "http://localhost:3000/media/audio/chick.mp3",
+    "categoryId": 2
+  },
+  {
+    "word": "chicken",
+    "translation": "курица",
+    "image": "http://localhost:3000/media/img/chicken.jpg",
+    "audio": "http://localhost:3000/media/audio/chicken.mp3",
+    "categoryId": 2
+  },
+  {
+    "word": "dog",
+    "translation": "собака",
+    "image": "http://localhost:3000/media/img/dog.jpg",
+    "audio": "http://localhost:3000/media/audio/dog.mp3",
+    "categoryId": 2
+  },
+  {
+    "word": "horse",
+    "translation": "лошадь",
+    "image": "http://localhost:3000/media/img/horse.jpg",
+    "audio": "http://localhost:3000/media/audio/horse.mp3",
+    "categoryId": 2
+  },
+  {
+    "word": "pig",
+    "translation": "свинья",
+    "image": "http://localhost:3000/media/img/pig.jpg",
+    "audio": "http://localhost:3000/media/audio/pig.mp3",
+    "categoryId": 2
+  },
+  {
+    "word": "rabbit",
+    "translation": "кролик",
+    "image": "http://localhost:3000/media/img/rabbit.jpg",
+    "audio": "http://localhost:3000/media/audio/rabbit.mp3",
+    "categoryId": 2
+  },
+  {
+    "word": "sheep",
+    "translation": "овца",
+    "image": "http://localhost:3000/media/img/sheep.jpg",
+    "audio": "http://localhost:3000/media/audio/sheep.mp3",
+    "categoryId": 2
+  },
+  {
+    "word": "bird",
+    "translation": "птица",
+    "image": "http://localhost:3000/media/img/bird.jpg",
+    "audio": "http://localhost:3000/media/audio/bird.mp3",
+    "categoryId": 3
+  },
+  {
+    "word": "fish",
+    "translation": "рыба",
+    "image": "http://localhost:3000/media/img/fish1.jpg",
+    "audio": "http://localhost:3000/media/audio/fish.mp3",
+    "categoryId": 3
+  },
+  {
+    "word": "frog",
+    "translation": "жаба",
+    "image": "http://localhost:3000/media/img/frog.jpg",
+    "audio": "http://localhost:3000/media/audio/frog.mp3",
+    "categoryId": 3
+  },
+  {
+    "word": "giraffe",
+    "translation": "жирафа",
+    "image": "http://localhost:3000/media/img/giraffe.jpg",
+    "audio": "http://localhost:3000/media/audio/giraffe.mp3",
+    "categoryId": 3
+  },
+  {
+    "word": "lion",
+    "translation": "лев",
+    "image": "http://localhost:3000/media/img/lion.jpg",
+    "audio": "http://localhost:3000/media/audio/lion.mp3",
+    "categoryId": 3
+  },
+  {
+    "word": "mouse",
+    "translation": "мышь",
+    "image": "http://localhost:3000/media/img/mouse.jpg",
+    "audio": "http://localhost:3000/media/audio/mouse.mp3",
+    "categoryId": 3
+  },
+  {
+    "word": "turtle",
+    "translation": "черепаха",
+    "image": "http://localhost:3000/media/img/turtle.jpg",
+    "audio": "http://localhost:3000/media/audio/turtle.mp3",
+    "categoryId": 3
+  },
+  {
+    "word": "dolphin",
+    "translation": "дельфин",
+    "image": "http://localhost:3000/media/img/dolphin.jpg",
+    "audio": "http://localhost:3000/media/audio/dolphin.mp3",
+    "categoryId": 3
+  },
+  {
+    "word": "skirt",
+    "translation": "юбка",
+    "image": "http://localhost:3000/media/img/skirt.jpg",
+    "audio": "http://localhost:3000/media/audio/skirt.mp3",
+    "categoryId": 4
+  },
+  {
+    "word": "pants",
+    "translation": "брюки",
+    "image": "http://localhost:3000/media/img/pants.jpg",
+    "audio": "http://localhost:3000/media/audio/pants.mp3",
+    "categoryId": 4
+  },
+  {
+    "word": "blouse",
+    "translation": "блузка",
+    "image": "http://localhost:3000/media/img/blouse.jpg",
+    "audio": "http://localhost:3000/media/audio/blouse.mp3",
+    "categoryId": 4
+  },
+  {
+    "word": "dress",
+    "translation": "платье",
+    "image": "http://localhost:3000/media/img/dress.jpg",
+    "audio": "http://localhost:3000/media/audio/dress.mp3",
+    "categoryId": 4
+  },
+  {
+    "word": "boot",
+    "translation": "ботинок",
+    "image": "http://localhost:3000/media/img/boot.jpg",
+    "audio": "http://localhost:3000/media/audio/boot.mp3",
+    "categoryId": 4
+  },
+  {
+    "word": "shirt",
+    "translation": "рубашка",
+    "image": "http://localhost:3000/media/img/shirt.jpg",
+    "audio": "http://localhost:3000/media/audio/shirt.mp3",
+    "categoryId": 4
+  },
+  {
+    "word": "coat",
+    "translation": "пальто",
+    "image": "http://localhost:3000/media/img/coat.jpg",
+    "audio": "http://localhost:3000/media/audio/coat.mp3",
+    "categoryId": 4
+  },
+  {
+    "word": "shoe",
+    "translation": "туфли",
+    "image": "http://localhost:3000/media/img/shoe.jpg",
+    "audio": "http://localhost:3000/media/audio/shoe.mp3",
+    "categoryId": 4
+  },
+  {
+    "word": "sad",
+    "translation": "грустный",
+    "image": "http://localhost:3000/media/img/sad.jpg",
+    "audio": "http://localhost:3000/media/audio/sad.mp3",
+    "categoryId": 5
+  },
+  {
+    "word": "angry",
+    "translation": "сердитый",
+    "image": "http://localhost:3000/media/img/angry.jpg",
+    "audio": "http://localhost:3000/media/audio/angry.mp3",
+    "categoryId": 5
+  },
+  {
+    "word": "happy",
+    "translation": "счастливый",
+    "image": "http://localhost:3000/media/img/happy.jpg",
+    "audio": "http://localhost:3000/media/audio/happy.mp3",
+    "categoryId": 5
+  },
+  {
+    "word": "tired",
+    "translation": "уставший",
+    "image": "http://localhost:3000/media/img/tired.jpg",
+    "audio": "http://localhost:3000/media/audio/tired.mp3",
+    "categoryId": 5
+  },
+  {
+    "word": "surprised",
+    "translation": "удивлённый",
+    "image": "http://localhost:3000/media/img/surprised.jpg",
+    "audio": "http://localhost:3000/media/audio/surprised.mp3",
+    "categoryId": 5
+  },
+  {
+    "word": "scared",
+    "translation": "испуганный",
+    "image": "http://localhost:3000/media/img/scared.jpg",
+    "audio": "http://localhost:3000/media/audio/scared.mp3",
+    "categoryId": 5
+  },
+  {
+    "word": "smile",
+    "translation": "улыбка",
+    "image": "http://localhost:3000/media/img/smile.jpg",
+    "audio": "http://localhost:3000/media/audio/smile.mp3",
+    "categoryId": 5
+  },
+  {
+    "word": "laugh",
+    "translation": "смех",
+    "image": "http://localhost:3000/media/img/laugh.jpg",
+    "audio": "http://localhost:3000/media/audio/laugh.mp3",
+    "categoryId": 5
+  },
+  {
+    "word": "beach",
+    "translation": "пляж",
+    "image": "http://localhost:3000/media/img/beach.jpg",
+    "audio": "http://localhost:3000/media/audio/beach.mp3",
+    "categoryId": 6
+  },
+  {
+    "word": "desert",
+    "translation": "пустыня",
+    "image": "http://localhost:3000/media/img/desert.jpg",
+    "audio": "http://localhost:3000/media/audio/desert.mp3",
+    "categoryId": 6
+  },
+  {
+    "word": "forest",
+    "translation": "лес",
+    "image": "http://localhost:3000/media/img/forest.jpg",
+    "audio": "http://localhost:3000/media/audio/forest.mp3",
+    "categoryId": 6
+  },
+  {
+    "word": "island",
+    "translation": "остров",
+    "image": "http://localhost:3000/media/img/island.jpg",
+    "audio": "http://localhost:3000/media/audio/island.mp3",
+    "categoryId": 6
+  },
+  {
+    "word": "lake",
+    "translation": "озеро",
+    "image": "http://localhost:3000/media/img/lake.jpg",
+    "audio": "http://localhost:3000/media/audio/lake.mp3",
+    "categoryId": 6
+  },
+  {
+    "word": "sea",
+    "translation": "море",
+    "image": "http://localhost:3000/media/img/sea.jpg",
+    "audio": "http://localhost:3000/media/audio/sea.mp3",
+    "categoryId": 6
+  },
+  {
+    "word": "river",
+    "translation": "река",
+    "image": "http://localhost:3000/media/img/river.jpg",
+    "audio": "http://localhost:3000/media/audio/river.mp3",
+    "categoryId": 6
+  },
+  {
+    "word": "volcano",
+    "translation": "вулкан",
+    "image": "http://localhost:3000/media/img/volcano.jpg",
+    "audio": "http://localhost:3000/media/audio/volcano.mp3",
+    "categoryId": 6
+  },
+  {
+    "word": "apple",
+    "translation": "яблоко",
+    "image": "http://localhost:3000/media/img/apple.jpg",
+    "audio": "http://localhost:3000/media/audio/apple.mp3",
+    "categoryId": 7
+  },
+  {
+    "word": "banana",
+    "translation": "банан",
+    "image": "http://localhost:3000/media/img/banana.jpg",
+    "audio": "http://localhost:3000/media/audio/banana.mp3",
+    "categoryId": 7
+  },
+  {
+    "word": "bread",
+    "translation": "хлеб",
+    "image": "http://localhost:3000/media/img/bread.jpg",
+    "audio": "http://localhost:3000/media/audio/bread.mp3",
+    "categoryId": 7
+  },
+  {
+    "word": "cake",
+    "translation": "пироженное",
+    "image": "http://localhost:3000/media/img/cake.jpg",
+    "audio": "http://localhost:3000/media/audio/cake.mp3",
+    "categoryId": 7
+  },
+  {
+    "word": "cheese",
+    "translation": "сыр",
+    "image": "http://localhost:3000/media/img/cheese.jpg",
+    "audio": "http://localhost:3000/media/audio/cheese.mp3",
+    "categoryId": 7
+  },
+  {
+    "word": "egg",
+    "translation": "яйцо",
+    "image": "http://localhost:3000/media/img/egg.jpg",
+    "audio": "http://localhost:3000/media/audio/egg.mp3",
+    "categoryId": 7
+  },
+  {
+    "word": "milk",
+    "translation": "молоко",
+    "image": "http://localhost:3000/media/img/milk.jpg",
+    "audio": "http://localhost:3000/media/audio/milk.mp3",
+    "categoryId": 7
+  },
+  {
+    "word": "potato",
+    "translation": "бульба",
+    "image": "http://localhost:3000/media/img/potato.jpg",
+    "audio": "http://localhost:3000/media/audio/potato.mp3",
+    "categoryId": 7
+  }
+]
