@@ -45,12 +45,18 @@ const createCard = async (newCard: Card, uploadedPicture: string,
   try {
     cards.push(newCard);
     await writeToFile(DATA_CARDS, cards);
-    fs.rename(uploadedPicture, pictureToCreate, (error) => {
+    fs.copyFile(uploadedPicture, pictureToCreate, (error) => {
       if (error) throw error;
     });
-    fs.rename(uploadedSound, soundToCreate, (error) => {
+    fs.copyFile(uploadedSound, soundToCreate, (error) => {
       if (error) throw error;
     });
+    // fs.rename(uploadedPicture, pictureToCreate, (error) => {
+    //   if (error) throw error;
+    // });
+    // fs.rename(uploadedSound, soundToCreate, (error) => {
+    //   if (error) throw error;
+    // });
   } catch (error) {
     return Promise.reject(error);
   }
