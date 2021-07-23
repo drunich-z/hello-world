@@ -1,0 +1,43 @@
+[
+  {
+    "id": 0,
+    "name": "Action (set A)",
+    "description": ""
+  },
+  {
+    "id": 1,
+    "name": "Action (set B)",
+    "description": ""
+  },
+  {
+    "id": 2,
+    "name": "Animal (set A)",
+    "description": ""
+  },
+  {
+    "id": 3,
+    "name": "Animal (set B)",
+    "description": ""
+  },
+  {
+    "id": 4,
+    "name": "Clothes",
+    "description": ""
+  },
+  {
+    "id": 5,
+    "name": "Emotions",
+    "description": ""
+  },
+  {
+    "id": 6,
+    "name": "Nature",
+    "description": ""
+  },
+  {
+    "id": 7,
+    "name": "Food",
+    "description": ""
+  }  
+]
+  
